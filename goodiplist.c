@@ -87,7 +87,7 @@ static int ThreadJod(const char *Domain, ListInfo *inf) {
     // INFO("The fastest ip for `%s' is %s: %lums.\n", Domain,
     //      inet_ntoa(Fastest->sin_addr), PTimer_End(&tm));
 
-    INFO("%lums\t: %s \t: `%s'\t fastest ip\n", PTimer_End(&tm),
+    INFO("%lums:%s\t:`%s'\tfastest ip\n", PTimer_End(&tm),
          inet_ntoa(Fastest->sin_addr), Domain);
 
     First = Array_GetBySubscript(&(inf->List), 0);
